@@ -7,7 +7,7 @@
 
 
     <TextView
-        android:id="@+id/libelle_detail_memo"
+        android:id="@+id/detail_memo"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="15dp"

@@ -20,7 +20,7 @@ class DetailFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         if (arguments != null && view != null) {
             val argument: String? = arguments!!.getString("memo").toString()
-            libelle_detail_memo.text = argument
+            detail_memo.text = argument
         }
     }
 }

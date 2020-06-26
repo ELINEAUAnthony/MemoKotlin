@@ -42,9 +42,9 @@ class MainActivity : AppCompatActivity() {
     }
 
         fun onClick(view: View?) {
-            memoAdapter!!.ajouterMemo(MemoDTO(libelle_new_memo!!.text.toString() ))
+            memoAdapter!!.ajouterMemo(MemoDTO(edit_memo!!.text.toString() ))
             liste_memo!!.smoothScrollToPosition(0)
-            libelle_new_memo!!.setText("")
+            edit_memo!!.setText("")
         }
 
 }

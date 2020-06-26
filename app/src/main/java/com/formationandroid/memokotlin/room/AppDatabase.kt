@@ -33,24 +33,24 @@ abstract class AppDatabase: RoomDatabase() {
                     AppDatabase::class.java, "memos.db"
                 )
                     .allowMainThreadQueries()
-                    .addCallback(prepopulateDatabase())
+                    .addCallback(addDatabase())
                     .build()
                 return instance as AppDatabase
             }
 
         }
 
-        private fun prepopulateDatabase(): Callback {
+        private fun addDatabase(): Callback {
 
             return object : Callback() {
 
                 @Override
                 override fun onCreate(@NonNull db: SupportSQLiteDatabase) {
                     super.onCreate(db)
-                    for (i in 0..5) {
+                    for (i in 1..5) {
                         val contentValues = ContentValues()
                         contentValues.put("memoId", i)
-                        contentValues.put("intitule", String.format("memo numéro: %s", i))
+                        contentValues.put("intitule", String.format("memo numéro : %s", i))
                         db.insert("memos", OnConflictStrategy.IGNORE, contentValues)
                     }
                 }

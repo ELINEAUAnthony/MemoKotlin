@@ -90,7 +90,7 @@ class MemoAdapter(listeMemoDTO: List<MemoDTO>, private val activity: AppCompatAc
                 editor.apply()
                 Toast.makeText(itemView.context, itemView.context.getString(R.string.main_message_position, adapterPosition + 1), Toast.LENGTH_LONG).show()
 
-                if (activity.findViewById<FrameLayout>(R.id.fragment_detail_memo)  == null) {
+                if (activity.findViewById<FrameLayout>(R.id.fragment_detail)  == null) {
                     val intent = Intent(v.context, DetailActivity::class.java)
                     intent.putExtra("memo", memoDTO.intitule)
                     v.context.startActivity(intent)
@@ -109,7 +109,7 @@ class MemoAdapter(listeMemoDTO: List<MemoDTO>, private val activity: AppCompatAc
                     //                              Transaction
                     val fragmentTransaction =
                         fragmentManager.beginTransaction()
-                    fragmentTransaction.replace(R.id.fragment_detail_memo, fragment, "detail")
+                    fragmentTransaction.replace(R.id.fragment_detail, fragment, "detail")
                     fragmentTransaction.commit()
                 }
             }

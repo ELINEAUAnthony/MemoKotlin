@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">Memo Kotlin</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="main_hint_saisie_memo">Saisir un mémo &#8230;</string>
+    <string name="main_hint_saisie_memo">Saisir un mémo</string>
     <string name="ok">OK</string>
     <!-- Main -->
-    <string name="main_message_position">Clic à la position %1$d</string>
+    <string name="main_message_position">Memo à la position %1$d</string>
     <string name="main_libelle_bouton_valider">OK</string>
 
 </resources>
